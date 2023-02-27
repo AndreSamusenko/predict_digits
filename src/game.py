@@ -1,8 +1,8 @@
 import sys
 import pygame
-import configs
-from canvas import Canvas
-from predictor import Predictor
+import src.configs as configs
+from src.canvas import Canvas
+from src.predictor import Predictor
 from _thread import start_new_thread
 
 

@@ -1,5 +1,5 @@
 import pygame
-import configs
+import src.configs as configs
 
 
 class Canvas:

@@ -1,3 +1,4 @@
-from game import Game
+from src.game import Game
 
 game = Game()
+
