@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="ru">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Угадай цифру · MNIST</title>
+<style>
+*{box-sizing:border-box}
+body{background:#f2efe7;color:#262a26;font:16px system-ui,sans-serif;margin:0}
+main{max-width:860px;margin:6vh auto;padding:0 22px}
+h1{font-size:clamp(36px,7vw,74px);letter-spacing:-.06em;margin:0}
+header p{margin:8px 0 24px;color:#555a51}
+section{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(220px,1fr);gap:32px}
+canvas{display:block;width:100%;height:auto;border-radius:16px;background-color:#fff;background-image:radial-gradient(#cdd2c9 1px,transparent 1px);background-size:16px 16px;touch-action:none;cursor:crosshair}
+aside{background:#253d34;color:white;border-radius:16px;padding:24px;align-self:start}
+h2{margin:0 0 18px;font-size:20px}
+.row{display:grid;grid-template-columns:20px 1fr 57px;align-items:center;gap:12px;margin:14px 0;font-variant-numeric:tabular-nums}
+.row span:last-child{text-align:right}
+.track{background:#456254;height:8px;border-radius:8px;overflow:hidden}
+.fill{height:100%;background:#c5ee89}
+button{background:#fff;border:1px solid #afb4a8;color:inherit;border-radius:30px;padding:10px 18px;margin-top:12px;font:inherit}
+[hidden]{display:none}
+@media(max-width:600px){main{margin:20px auto;padding:0 16px}section{grid-template-columns:1fr;gap:14px}canvas{width:min(100%,46vh);margin:auto}aside{padding:16px 20px}}
+</style>
+<main><header><h1>Угадай цифру</h1><p>Нарисуй цифру от 0 до 9 пальцем или мышью.</p></header>
+<section><div><canvas width="280" height="280" aria-label="Поле для рисования цифры"></canvas><button type="button">Очистить</button></div>
+<aside><h2>Версии модели</h2><div id="empty">Пока нет рисунка</div><div id="results" hidden></div></aside></section></main>
+<script src="weights.js"></script><script src="model.js"></script><script src="app.js"></script>
+</html>
